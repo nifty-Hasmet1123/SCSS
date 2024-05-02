@@ -1,0 +1,100 @@
+@use "sass:math";
+// grid but using flex hha
+
+$grid-columns: 12;
+$grid-gaps: (
+    "0": 0,
+    "1": 10px,
+    "2": 20px,
+    "3": 30px
+);
+
+$layout-values: flex-start, flex-end, center, space-between, space-around;
+
+
+// base layout classes
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+};
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+};
+
+// grid gaps
+@each $k, $v in $grid-gaps {
+    .gap-#{$k} > * {
+        padding: $v;
+    };
+
+    .gap-#{$k} {
+        // shifting the margin to the left
+        // the idea of this is to make the grid boxes in the center
+        margin-left: -$v;
+        margin-right: -$v
+    };
+};
+
+// justify content classes
+@each $val in $layout-values {
+    .justify-#{$val} {
+        justify-content: $val;
+    };
+};
+
+
+// col classes
+@include xs {
+    @for $idx from 1 through $grid-columns {
+        .col-#{$idx}-xs {
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($idx * 100%, $grid-columns);
+        };
+    };
+};
+
+@include sm {
+    @for $idx from 1 through $grid-columns {
+        .col-#{$idx}-sm {
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($idx * 100%, $grid-columns);
+        };
+    };
+};
+
+@include md {
+    @for $idx from 1 through $grid-columns {
+        .col-#{$idx}-md {
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($idx * 100%, $grid-columns);
+        };
+    };
+};
+
+@include lg {
+    @for $idx from 1 through $grid-columns {
+        .col-#{$idx}-lg {
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($idx * 100%, $grid-columns);
+        };
+    };
+};
+
+@include xl {
+    @for $idx from 1 through $grid-columns {
+        .col-#{$idx}-xl {
+            box-sizing: border-box;
+            flex-grow: 0;
+            width: math.div($idx * 100%, $grid-columns);
+        };
+    };
+};

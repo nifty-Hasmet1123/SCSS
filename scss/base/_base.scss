@@ -1,0 +1,38 @@
+// reset styles
+* {
+    color: inherit;
+    margin: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: $base-background-keyframes;
+    animation: 2s ease-in-out infinite textclip;
+    background-size: 80%;
+    background-position: top right;
+}
+
+@keyframes textclip {
+    to {
+        background-position: -300% 0%;
+    }
+}
+
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+a { 
+    text-decoration: none;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dotted #efefef;
+}
+
+img {
+    max-width: 100%;
+}

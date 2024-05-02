@@ -1,0 +1,54 @@
+// setting default arguments to the function parameters
+@mixin btn($border: 0, $bgColor: #e2e2e2) {
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: $base-padding $base-padding * 2;
+    border-radius: $base-border-radius;
+    background-color: $bgColor;
+    border: $border;
+};
+
+
+.btn {
+    // uses default values if there is no argument is passed in.
+    @include btn;
+}
+
+
+@each $key, $val in $colors {
+    // @debug $key;
+
+    .btn-#{$key} {
+        @include btn(0, $val);
+
+        &:hover {
+            // lighten is a scss built-in function
+            background-color: lighten($val, 5);
+        };
+    };
+
+    .btn-outlined-#{$key} {
+        $outlinesBorders: $base-border-thickness solid $val;
+        $outlinesBg: #fff;
+        @include btn($outlinesBorders, $outlinesBg);
+
+        
+        &:hover {
+            background-color: $val;
+        };
+    };
+
+    .btn-complement-#{$key} {
+        @include btn($val);
+
+        // creating a complementary function
+        // calling custom _function(light-comp()) from the _functions.scss module.
+        color: light-comp($val);
+
+        &:hover {
+            color: $val;
+            background-color: light-comp($val);
+        };
+    };
+};

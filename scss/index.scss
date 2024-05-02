@@ -1,0 +1,25 @@
+// variables & functions
+@import './functions.scss';
+@import './variables/variable.scss';
+
+// base & layout
+@import './base/base.scss';
+
+// colors
+@import './colors/colors.scss';
+
+// components(button, card, navbar)
+@import './components/container';
+@import './components/card.scss';
+@import './components/button.scss';
+@import './components/navbar.scss';
+@import './components/badge.scss';
+
+// utilities (margin, padding, opacity)
+@import './utils/util.scss';
+
+// breakpoints(media queries)
+@import './media/breakpoints.scss';
+
+// grid system
+@import './grids/grid.scss';

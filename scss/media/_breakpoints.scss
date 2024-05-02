@@ -1,0 +1,84 @@
+$breakpoints: (
+    "xs": 0,
+    "sm": 480px,
+    "md": 720px,
+    "lg": 960px,
+    "xl": 1200px
+);
+
+@mixin xs {
+    @media (min-width: map-get($breakpoints, "xs")) {
+        // @content is a placeHolder from sass that allows you to include the content of 
+        // the mixin at the location where the mixin is used when you want to pass styles
+        // into a mixin and apply them at a specific point within the mixin
+        // if we were to call in a class
+        //  @include xs {
+        //      font-size: 10px,
+        //      font-weight: 700
+        //     }
+        // we want to use @xs mixin on different classes the property you will passed
+        // will be the @content placeHolder 
+        // @content is necessary to accept and apply styles passed to it.
+        
+        @content;
+    }
+};
+
+@mixin sm {
+    @media (min-width: map-get($breakpoints, "sm")) {
+        @content;
+    }
+};
+
+@mixin md {
+    @media (min-width: map-get($breakpoints, "md")) {
+        @content;
+    }
+};
+
+@mixin lg {
+    @media (min-width: map-get($breakpoints, "lg")) {
+        @content;
+    }
+};
+
+@mixin xl {
+    @media (min-width: map-get($breakpoints, "xl")) {
+        @content;
+    }
+};
+
+
+// custom breakpoint
+@mixin breakPoint($customBp: 0) {
+    @media (min-width: $customBp) {
+        @content;
+    }
+};
+
+// example
+.responsive-test {
+    @include xs {
+        color: red;
+    };
+
+    @include sm {
+        color: blue;
+    };
+
+    @include md {
+        color: green;
+    };
+
+    @include lg {
+        color: purple;
+    };
+
+    @include xl {
+        color: orange;
+    };
+
+    @include breakPoint(1400px) {
+        color: pink;
+    };
+}

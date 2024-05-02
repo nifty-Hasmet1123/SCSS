@@ -1,0 +1,5 @@
+sass input.scss output.css or 
+sass input.scss:output.css
+
+sass --watch input.scss output.css or 
+sass --watch input.scss:output.css

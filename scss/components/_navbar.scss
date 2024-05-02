@@ -1,0 +1,36 @@
+// percentage sign is a placeholder rule
+// you can extend placeholder
+// this will save class naming in the final css layout
+// this is useful if the extension will only serve a purpose 
+// inside this file.
+
+%flex-layout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+};
+
+.navbar {
+    @extend %flex-layout;
+
+    padding: $base-padding $base-padding * 2;
+    box-shadow: $base-box-shadow;
+
+    .site-title {
+        font-size: $font-size-lg;
+    };
+
+    .container {
+        @extend %flex-layout;
+    };
+};
+
+@each $k, $v in $colors {
+    .navbar-#{$k} {
+        @extend .navbar;
+
+        background-color: $v;
+    };
+};

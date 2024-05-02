@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Maximo Ignacio">
+    <meta name="description" content="A simple design using scss">
+    <meta name="keywords" content="SCSS, I LOVE SCSS, DESIGNS">
+    <meta name="WAI-ARIA" content="true">
+    <link rel="stylesheet" href="dist/index.css" type="text/css">
+    <title>SCSS/SASS Maximo Ignacio</title>
+</head>
+<body>
+    <nav class="navbar-purple text-white mb-4" role="navigation" aria-label="Main Navigation">
+        <div class="container" id="nav__text">
+            <h2 class="site-title" id="navTitle">Hello SCSS</h2>
+            <p id="nav__p">I Love SCSS</p>
+        </div>
+    </nav>
+
+    <main class="container" role="region" aria-label="Color Section">
+        <!-- colors -->
+        <!-- condition loop and scss parent selectors -->
+        <h2 class="__transform__">Colors</h2>
+        <section class="txt-ctn">
+            <span class="text-primary __transform__">primary text</span> ||
+            <span class="text-secondary __transform__">secondary text</span> ||
+            <span class="text-error __transform__">error text</span> ||
+            <span class="text-info __transform__">info text</span> ||
+            <span class="text-blue __transform__">blue text</span> ||
+            <span class="text-red __transform__">red text</span> || 
+            <span class="text-green __transform__">green text</span> ||
+            <span class="text-yellow __transform__">yellow text</span> ||
+            <span class="text-purple __transform__">purple text</span> || 
+            <span class="text-orange __transform__">orange text</span> ||
+            <span class="text-grey __transform__">grey text</span>
+        </section>
+
+        <hr class="mt-2 mb-4 bg-purple" role="separator" aria-label="Section Separator">
+
+        <section class="bg-ctn container__children" role="region" aria-label="Background Color Section">
+            <span class="bg-primary text-white __transform__">primary text</span> ||
+            <span class="bg-secondary text-white __transform__">secondary text</span> ||
+            <span class="bg-error text-white __transform__">error text</span> ||
+            <span class="bg-info text-white __transform__">info text</span> ||
+            <span class="bg-blue text-white __transform__">blue text</span> ||
+            <span class="bg-red text-white __transform__">red text</span> ||
+            <span class="bg-green text-white __transform__">green text</span> ||
+            <span class="bg-yellow text-white __transform__">yellow text</span> ||
+            <span class="bg-purple text-white __transform__">purple text</span> ||
+            <span class="bg-orange text-white __transform__">orange text</span> ||
+            <span class="bg-grey text-white __transform__">grey text</span>
+        </section>
+
+        <hr class="mt-2 mb-4 bg-purple" role="separator" aria-label="Color Selection">
+
+        <section class="bg-ctn-2 container__children" role="region" aria-label="Background Color Section 2">
+            <span class="bg-primary-dark-8 text-white __transform__">primary dark 8</span> |
+            <span class="bg-primary-dark-6 text-white __transform__">primary dark 6</span> |
+            <span class="bg-primary-dark-4 text-white __transform__">primary dark 4</span> |
+            <span class="bg-primary-dark-2 text-white __transform__">primary dark 2</span> |
+            <span class="bg-primary text-white __transform__">primary</span> |
+            <span class="bg-primary-light-2 text-white __transform__">primary dark 2</span> |
+            <span class="bg-primary-light-4 text-white __transform__">primary dark 4</span> |
+            <span class="bg-primary-light-6 text-white __transform__">primary dark 6</span> |
+            <span class="bg-primary-light-8 text-white __transform__">primary dark 8</span>
+        </section>
+
+        <hr class="mt-2 mb-4 bg-purple" role="separator" aria-label="Hover Section">
+
+        <div class="container__children">
+            <a 
+                href="#" 
+                class="text-primary text-hover-orange-light-1 __transform__" 
+                role="button" 
+                aria-label="Hover Me Link"
+            >
+                hover me
+            </a>
+        </div>
+
+        <hr class="mt-2 mb-4 bg-purple __transform__" role="separator">
+
+        <!-- buttons -->
+        <!-- mixins and custom scss function -->
+        <h2 class="container__children __transform__" role="button">Buttons</h2>
+        <section> 
+            <a href="#" class="btn" role="button">default btn</a>
+            <a href="#" class="btn-primary text-white" role="button">click me</a>
+            <a href="#" class="btn-secondary text-white" role="button">click me</a>
+            <a href="#" class="btn-error text-white" role="button">click me</a>
+            <a href="#" class="btn-info text-white" role="button">click me</a>
+            <a href="#" class="btn-outlines-purple text-purple text-hover-white" role="button">click me</a>
+            <a href="#" class="btn-outlines-orange text-orange text-hover-white" role="button">click me</a>
+            <a href="#" class="btn-complement-purple" role="button">click me</a>
+            <a href="#" class="btn-complement-primary" role="button">click me</a>
+        </section>
+        <hr class="mt-4 mb-4 bg-purple" role="separator">
+
+        <!-- font sizes -->
+        <h2 class="mb-2 __rotate__">Font Sizes</h2>
+        <section>
+            <div class="font-sm __rotate__" role="text">this is small font</div>
+            <div class="font-md __rotate__" role="text">this is medium font</div>
+            <div class="font-lg __rotate__" role="text">this is large font</div>
+            <div class="font-xl __rotate__" role="text">this is extra large font</div>
+            <div class="font-xxl __rotate__" role="text">this is extra extra large</div>
+        </section>
+        <hr class="mt-4 mb-4 bg-purple">
+
+        <!-- card -->
+        <!-- @debug, scss variables, parent seletor-->
+        <h2 class="mb-2 __rotate__">card</h2>
+        <section class="card" role="article">
+            <h1 class="card-title __rotate__" role="heading" aria-label="1">this is a card title</h1>
+            <p class="card-body __rotate__" role="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ratione consequuntur <a href="#">ea</a> expedita ipsum odio quibusdam exercitationem, aut incidunt fugiat nisi, quos cum quo ab est fugit iusto nulla saepe!
+            </p>
+        </section>
+
+        <hr class="mt-4 mb-4 bg-purple" role="separator">
+
+        <!-- grid system -->
+        <h2 class="mb-2 __rotate__">Grid System</h2>
+        <div class="responsive-test __rotate__" role="region">
+            changing colors
+        </div>
+
+        <section class="row gap-2 justify-center" role="group" aria-label="Classmate Cards">
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card __rotateY__">
+                    <h3 class="card-title">Hello, Classmates!</h3>
+                    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card __rotateY__">
+                    <h3 class="card-title">Hello, Classmates!</h3>
+                    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card __rotateY__">
+                    <h3 class="card-title">Hello, Classmates!</h3>
+                    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+
+            <div class="col-12-xs col-5-sm col-3-xl">
+                <div class="card __rotateY__">
+                    <h3 class="card-title">Hello, Classmates!</h3>
+                    <p class="card-body">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+        <hr class="mt-4 mb-4 bg-purple" role="separator">
+    </main>
+</body>
+</html>

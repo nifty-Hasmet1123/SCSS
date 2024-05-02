@@ -1,0 +1,16 @@
+{
+  "name": "sass-net-ninja",
+  "version": "1.0.0",
+  "description": "test sass",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass --watch scss/index.scss:dist/index.css",
+    "purgecss": "purgecss --css dist/index.css --content *.html --output dist/optimized-styles.css"
+  },
+  "keywords": [],
+  "author": "n/a",
+  "license": "ISC",
+  "devDependencies": {
+    "purgecss": "^5.0.0"
+  }
+}

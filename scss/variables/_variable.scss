@@ -1,0 +1,63 @@
+// theme colors
+// !default value so if other user were to use this src code then can
+// modify the colors after they create their own scss folder then importing
+// this one.
+
+$primary: #326dee !default;
+$secondary: #1ac888 !default;
+$error: #d32752 !default;
+$info: #f6c31c !default;
+$base-background-keyframes: linear-gradient(
+    90deg,
+    rgba(217, 236, 52, 0.932),
+    rgb(119, 65, 245),
+    rgb(224, 22, 157)
+);
+
+// color palette using scss map
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "error": $error,
+    "info": $info,
+    "blue": #1919e6,
+    "red": #e61919,
+    "yellow": #e6e619,
+    "green": #19e635,
+    "orange": #ffa600,
+    "purple": #9900ff,
+    "grey": #808080,
+    "black": black,
+    "white": white
+);
+////////////////////////////////////////////////////////////
+// test scss map function                                 //
+// .test-btn {                                            //
+//     color: map-get($map: $colors, $key: "purple");     //
+// }                                                      //
+                                                          //
+// @debug map-get($colors, "purple");                     //
+// @debug map-has-key($colors, "secondary" );             //
+// @debug map-has-key($colors, "tertiary" );              //
+// @debug map-remove($colors, "primary" );                //
+// @debug map-merge($colors, ("pink": #ffc0cb));          //
+// @debug length(map-keys($map: $colors));                //
+////////////////////////////////////////////////////////////
+
+// spacing
+$base-padding: 0.75rem !default;
+$base-margin: 0.75rem !default;
+
+// borders
+$base-border-thickness: 1px !default;
+$base-border-radius: 20px !default;
+
+// box-shadow
+$base-box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;
+
+// font sizes
+$base-font-size: 1rem !default;
+$font-size-sm: $base-font-size * 0.75 !default;
+$font-size-lg: $base-font-size * 1.5 !default;
+$font-size-xl: $base-font-size * 2 !default;
+$font-size-xxl: $base-font-size * 3 !default;

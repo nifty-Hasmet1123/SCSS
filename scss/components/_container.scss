@@ -1,0 +1,45 @@
+.container .__transform__ {
+    transition: 2s all;
+    // perspective: 100%;
+
+    &:hover {
+        transform: rotateX(360deg);
+        font-size: 2em;
+        // transform: rotate3d(0, 70, 20, 360deg);
+    }
+}
+
+// .container {
+//     transition: 3s all;
+//     perspective: 100%;
+
+//     &:hover {
+//         // transform: rotateX(360deg);
+//         font-size: 1.5em;
+//         transform: rotate3d(0, 70, 20, 360deg);
+//     }
+// }
+
+#nav__text {
+    transition: 3s all;
+
+    &:hover {
+        transform: rotateX(180deg);
+    }
+}
+
+.__rotate__ {
+    transition: 2s ease;
+
+    &:hover {
+        transform: rotateX(360deg);
+    }
+}
+
+.__rotateY__ {
+    transition: 2s ease;
+
+    &:hover {
+        transform: rotateY(360deg);
+    }
+}
