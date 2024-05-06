@@ -1,5 +1,4 @@
 @use "sass:math";
-// grid but using flex hha
 
 $grid-columns: 12;
 $grid-gaps: (
@@ -33,8 +32,6 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
     };
 
     .gap-#{$k} {
-        // shifting the margin to the left
-        // the idea of this is to make the grid boxes in the center
         margin-left: -$v;
         margin-right: -$v
     };

@@ -1,4 +1,3 @@
-// making utility classes
 @use 'sass:math';
 
 $utilities: (
@@ -160,11 +159,7 @@ $utilities: (
     )
 );
 
-// create a condition function here
 @mixin keyValueConditions($prefix, $key, $value, $property) {
-    // the `default` comes from the values if the value is 
-    // set to `default` just put the .{$prefix} name on the css utility.
-
     @if ($key == "default") {
         .#{$prefix} {
             #{$property}: $value;
@@ -183,7 +178,6 @@ $utilities: (
     $value: map-get($map, "values");
 
     @each $k, $v in $value {
-        // attached the condition here
         @include keyValueConditions($prefix, $k, $v, $property);
     };
 };

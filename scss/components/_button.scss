@@ -1,4 +1,3 @@
-// setting default arguments to the function parameters
 @mixin btn($border: 0, $bgColor: #e2e2e2) {
     text-decoration: none;
     cursor: pointer;
@@ -11,7 +10,6 @@
 
 
 .btn {
-    // uses default values if there is no argument is passed in.
     @include btn;
 }
 

@@ -7,19 +7,7 @@ $breakpoints: (
 );
 
 @mixin xs {
-    @media (min-width: map-get($breakpoints, "xs")) {
-        // @content is a placeHolder from sass that allows you to include the content of 
-        // the mixin at the location where the mixin is used when you want to pass styles
-        // into a mixin and apply them at a specific point within the mixin
-        // if we were to call in a class
-        //  @include xs {
-        //      font-size: 10px,
-        //      font-weight: 700
-        //     }
-        // we want to use @xs mixin on different classes the property you will passed
-        // will be the @content placeHolder 
-        // @content is necessary to accept and apply styles passed to it.
-        
+    @media (min-width: map-get($breakpoints, "xs")) {        
         @content;
     }
 };

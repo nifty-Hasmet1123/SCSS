@@ -1,7 +1,3 @@
-// the purpose of a function is to write some variables inside it 
-// use the built-in function from the scss 
-// then the return the specific value using @return keyword
-
 @function light-comp($color) {
     $complement: complement($color);
 

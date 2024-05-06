@@ -1,9 +1,4 @@
-// using loops using @each 
-// we will iterate the colors from the _variables.scss;
-
 @each $key, $value in $colors {
-    // this is how you attached the iteration string
-    // to a class using #{iterator}
     .text-#{$key} {
         color: $value
     };
@@ -19,18 +14,12 @@
         background-color: $value;
     };
 
-    // using for, from and through keyword to generate indexes instead
-    // these are inclusives
-
-    // using if statements
     @if ($value != black and $value != white) {
 
         // light variation
         @for $index from 1 through 9 {
 
             .text-#{$key}-light-#{$index} {
-
-                // mix is from scss that accepts 3 arguments. It blends the colors
                 color: mix(white, $value, $index * 10 * 1%);
             };
 
